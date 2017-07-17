@@ -8,5 +8,5 @@ https://www.youtube.com/embed/WE8_QbvtSjQ?modestbranding=1&rel=0
 
 # avatar
 <a class="ending-avatar" href="/">
-![Adam Goldman](/content/images/2017/07/me.jpg)
-</div>
+![Adam Goldman](/content/images/2017/07/me-2.jpg)
+</a>
