@@ -490,12 +490,6 @@ textarea:focus {
     outline-width: 0;
 }
 
-select {
-    width: 270px;
-    height: 30px;
-    line-height: 30px;
-}
-
 button {
     min-height: 35px;
     width: auto;
