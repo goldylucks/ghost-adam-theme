@@ -3,17 +3,24 @@
 {{!-- This is a page template. A page outputs content just like any other post, and has all the same
     attributes by default, but you can also customise it to behave differently if you prefer. --}}
 
-{{!-- Everything inside the #post tags pulls data from the page --}}
-{{#post}}
-
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
         {{#if @blog.navigation}}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {{/if}}
     </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{@blog.title}}</h1>
+            <h2 class="page-description">{{@blog.description}}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
+
+{{!-- Everything inside the #post tags pulls data from the page --}}
+{{#post}}
 
 <main class="content" role="main">
     <article class="{{post_class}}">
@@ -27,5 +34,10 @@
         </section>
 
     </article>
+    <form class="subscribe-form form" action="https://www.getdrip.com/forms/47603601/submissions" method="post" data-drip-embedded-form="47603601">
+      <h3 data-drip-attribute="headline">Get more <span data-title="aka 'subscribe'">cool stuff</span></h3>
+      <input type="email" id="drip-email" name="fields[email]" placeholder="Step 1: Your Email here" />
+      <button name="submit" data-drip-attribute="sign-up-button">Step 2: Bring it!</button>
+    </form>
 </main>
 {{/post}}
